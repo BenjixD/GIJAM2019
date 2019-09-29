@@ -297,4 +297,11 @@ public class ClashEvent : MonoBehaviour
    
         return orig;
     }
+    IEnumerator Turn() {
+        while(true) {
+            int attackerCommand = m_attacker.GetCommand();
+            int defenderCommand = m_defender.GetCommand();
+            yield return new WaitForSeconds(1f);    
+        }
+	}
 }
